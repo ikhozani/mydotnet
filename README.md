@@ -10,19 +10,26 @@ Project test dotnet dengan case API upload file.
 [AUTH]
 POST
 /api/Auth/register
+
 POST
 /api/Auth/login
+
 
 
 [FILE]
 POST
 /api/File/upload
+
 POST
 /api/File/upload-chunk
+
 GET
 /api/File/list
+
 GET
 /api/File/download/{id}
 
+
 Detailnya bisa diligat di swaggerUI
+
 http://localhost:5052/swagger/index.html
