@@ -8,6 +8,10 @@
 bin/
 obj/
 
+
 # Ignore NuGet packages
 *.nuget.props
 *.nuget.targets
+
+#ignnore file upload
+Uploads/
