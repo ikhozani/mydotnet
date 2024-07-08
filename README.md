@@ -14,10 +14,8 @@ if (application != null && application.protected != null)
 
 public class ApplicationInfo
 {
-
     public string Path { get; set; }
     public string Name { get; set; }
-
 }
 
 public ApplicationInfo GetInfo()
