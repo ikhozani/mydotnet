@@ -69,7 +69,42 @@ public class Laptop
 6. Code program tersebut bisa menyebabkan memory leak dan alokasi memory yang besar hingga insufficient memory pada system. Hal ini disebabkan adanya looping forever dimana setip loop mengalokasinya anak node yang di keep di root not. dan setial child node mengalokasikan 1000 cucu node dan selalu di keep refrenence nya.Jadi memory akan banyak teralokasi sementara garbage collector sulit bekerja karena reference dari anak dan cucu node masih di keep terus.
 
 
-7. Chache tidak terlalu berfungsi di sini, karena key datanya selalu unik. Jadi memang sulit untuk di cache.
+7. Untuk implementasi cache yang tepat adalah saat Add data check data di cache dulu, kalau ada memakai data yang ada. Kalau tidak ada baru create dan insert cache.
+
+```
+using System;
+using System.Collections.Generic;
+class Cache
+{
+	private static Dictionary<int, object> _cache = new Dictionary<int,
+	object>();
+	public static void Add(int key, object value)
+	{
+		_cache.Add(key, value);
+	}
+	public static object Get(int key)
+	{
+		return _cache[key];
+	}
+}
+class Program
+{
+	static void Main(string[] args)
+	{
+		for (int i = 0; i < 1000000; i++)
+		{
+			//check id data exist
+			if(Cache.Get(i) == null){
+				Cache.Add(i, new object());
+			}
+		}
+		Console.WriteLine("Cache populated");
+		Console.ReadLine();
+	}
+}
+```
+
+Tapi untuk kasus di atas, chache tidak terlalu berfungsi di sini, karena key datanya selalu unik. Jadi memang sulit untuk di cache.
 
 
 8. Project Code sebagaimana dibawah ini.
