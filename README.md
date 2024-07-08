@@ -105,7 +105,7 @@ class Program
 }
 ```
 
-Tapi untuk kasus di atas, chache tidak terlalu berfungsi di sini, karena key datanya selalu unik. Jadi memang sulit untuk di cache.
+Tapi untuk kasus di atas, chache tidak terlalu berfungsi, karena key datanya selalu unik dari increment number. 
 
 
 8. Project Code sebagaimana dibawah ini.
@@ -138,7 +138,7 @@ POST
 POST
 /api/File/upload-chunk (untuk upload file big size)
 ```
-disini ada return value untuk menunjukkan file sukses di uploan baik untuk kondisi partial chunk da kondisi file complete.
+disini ada return value untuk menunjukkan file sukses di upload baik untuk kondisi partial chunk da kondisi file complete.
 
 ```
 GET
@@ -148,6 +148,6 @@ GET
 /api/File/download/{id}
 ```
 
-Detailnya bisa diligat di swaggerUI
+Detailnya bisa dilihat di swaggerUI
 
 http://localhost:5052/swagger/index.html
