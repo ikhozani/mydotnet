@@ -138,7 +138,7 @@ POST
 POST
 /api/File/upload-chunk (untuk upload file big size)
 ```
-disini ada return value untuk menunjukkan file sukses di upload baik untuk kondisi partial chunk da kondisi file complete.
+disini ada return value untuk menunjukkan file sukses di upload baik untuk kondisi partial chunk dan kondisi file complete.
 
 ```
 GET
