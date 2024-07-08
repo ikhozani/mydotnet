@@ -94,7 +94,7 @@ class Program
 	{
 		for (int i = 0; i < 1000000; i++)
 		{
-			//check id data exist
+			//check if data exist
 			if(Cache.Get(i) == null){
 				Cache.Add(i, new object());
 			}
