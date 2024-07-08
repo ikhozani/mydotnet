@@ -31,6 +31,7 @@ public ApplicationInfo GetInfo()
 
 ```
 
+Selain pakai class atau struct, return multiple value bisa juga dilakukan dengan return Tupple, Dictionary dan juga anonymous class
 
 3. Untuk memordifikasi dengan private members, class bisa diubah menjadi:
 ```
