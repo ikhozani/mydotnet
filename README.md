@@ -3,16 +3,21 @@
 
 1. Saya kira code tersebut dapat dipersingkat sebagai berikut agar lebih mudah dibaca
 
-if (application != null && application.protected != null) {
+if (application != null && application.protected != null) 
+{
+
 	return application.protected.shieldLastRun;
+ 
 }
 
 2. Untuk melengkapi code tersebut, kita perlu membuat class atau struct sebagai return value dari GetInfo() tersebut
 
 public class ApplicationInfo
 {
+
     public string Path { get; set; }
     public string Name { get; set; }
+
 }
 
 public ApplicationInfo GetInfo()
